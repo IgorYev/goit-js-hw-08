@@ -14,8 +14,8 @@ const formState = throttle(() => {
 }, 500);
 
 refs.form.addEventListener('submit', onFormSubmit);
-refs.textarea.addEventListener('input', formState); 
-refs.input.addEventListener('input', formState); 
+refs.form.addEventListener('input', formState); 
+
 
 function restoreFormState() {
     const savedFormState = localStorage.getItem('STORAGE_KEY');
